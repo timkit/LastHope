@@ -27,13 +27,8 @@ public class Student
       }
       System.out.println("Deserialized HashMap..");
       // Display content using Iterator
-      Set set = map.entrySet();
-      Iterator iterator = set.iterator();
-      
-      while(iterator.hasNext()) {
-         Map.Entry mentry = (Map.Entry)iterator.next();
-         System.out.print("key: "+ mentry.getKey() + " & Value: ");
-         System.out.println(mentry.getValue());
+      for(HashMap.Entry<Integer, String> go: map.entrySet()) {
+    	  System.out.println("key: "+go.getKey()+" value: "+go.getValue());
       }
     }
 }
